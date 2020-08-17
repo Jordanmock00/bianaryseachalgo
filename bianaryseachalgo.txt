@@ -1,0 +1,19 @@
+pos = -1
+
+def search(list, n):
+    i = 0 
+    while i< len(list):
+         if list[i] == n:
+             globals()['pos'] = i         
+             return True
+         i = i + 1
+    return False
+
+list = [5, 3, 1, 7, 9, 6, 4]
+n = 9
+serch(list)
+
+if search(list, n):
+    print("it be at",pos+1)
+else:
+    print("not here")
